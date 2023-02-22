@@ -43,10 +43,10 @@ return {
             { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
             { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
             -- stylua: ignore
-            {
-              function() return require("nvim-navic").get_location() end,
-              cond = function() return package.loaded["nvim-navic"] and require("nvim-navic").is_available() end,
-            },
+            -- {
+            --   function() return require("nvim-navic").get_location() end,
+            --   cond = function() return package.loaded["nvim-navic"] and require("nvim-navic").is_available() end,
+            -- },
             metals_status,
           },
           lualine_x = {
@@ -80,6 +80,18 @@ return {
             function()
               return " " .. os.date("%R")
             end,
+          },
+        },
+        winbar = {
+          lualine_c = {
+            {
+              function()
+                return require("nvim-navic").get_location()
+              end,
+              cond = function()
+                return package.loaded["nvim-navic"] and require("nvim-navic").is_available()
+              end,
+            },
           },
         },
         extensions = { "nvim-tree" },
