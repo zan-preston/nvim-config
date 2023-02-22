@@ -5,6 +5,7 @@
 local metals_config = require("metals").bare_config()
 
 metals_config.settings = {
+  serverVersion = "latest.snapshot",
   showImplicitArguments = true,
   showImplicitConversionsAndClasses = true,
   showInferredType = true,
