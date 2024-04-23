@@ -10,6 +10,7 @@ metals_config.settings = {
   showImplicitConversionsAndClasses = true,
   showInferredType = true,
   excludedPackages = { "akka.actor.typed.javadsl", "com.github.swagger.akka.javadsl" },
+  testUserInterface = "Test Explorer",
 }
 
 metals_config.init_options.statusBarProvider = "off"
