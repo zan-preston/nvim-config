@@ -53,22 +53,22 @@ return {
             notes_subdir = "notes",
           },
         },
-        {
-          name = "no-vault",
-          path = function()
-            -- could also Alternatively use CWD:
-            -- return assert(vim.fn.getcwd())
-            return assert(vim.fs.dirname(vim.api.nvim_buf_get_name(0)))
-          end,
-          overrides = {
-            notes_subdir = vim.NIL,
-            new_notes_location = "current_dir",
-            templates = {
-              subdir = vim.NIL,
-            },
-            disable_frontmatter = true,
-          },
-        },
+        -- {
+        --   name = "no-vault",
+        --   path = function()
+        --     -- could also Alternatively use CWD:
+        --     -- return assert(vim.fn.getcwd())
+        --     return assert(vim.fs.dirname(vim.api.nvim_buf_get_name(0)))
+        --   end,
+        --   overrides = {
+        --     notes_subdir = vim.NIL,
+        --     new_notes_location = "current_dir",
+        --     templates = {
+        --       subdir = vim.NIL,
+        --     },
+        --     disable_frontmatter = true,
+        --   },
+        -- },
       },
 
       -- Alternatively - and for backwards compatibility - you can set 'dir' to a single path instead of
