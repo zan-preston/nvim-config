@@ -275,7 +275,12 @@ return {
         -- Runs anytime you leave the buffer for a note.
         ---@param client obsidian.Client
         ---@param note obsidian.Note
-        leave_note = function(client, note) end,
+        leave_note = function(client, note)
+          vim.api.nvim_buf_call(note.bufnr or 0, function()
+            vim.cmd("silent w")
+          end)
+          os.execute('git add . && git commit -m "autocommit: $(date)"')
+        end,
 
         -- Runs right before writing the buffer for a note.
         ---@param client obsidian.Client
