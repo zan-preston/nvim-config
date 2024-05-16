@@ -90,7 +90,7 @@ return {
         -- Optional, if you want to change the date format of the default alias of daily notes.
         alias_format = "%B %-d, %Y",
         -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-        template = nil,
+        template = "_daily.md",
       },
 
       -- Optional, completion of wiki links, local markdown links, and tags using nvim-cmp.
@@ -279,7 +279,7 @@ return {
           vim.api.nvim_buf_call(note.bufnr or 0, function()
             vim.cmd("silent w")
           end)
-          os.execute('git add . && git commit -m "autocommit: $(date)"')
+          -- os.execute('git add . && git commit -m "autocommit: $(date)"')
         end,
 
         -- Runs right before writing the buffer for a note.
