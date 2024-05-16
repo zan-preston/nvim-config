@@ -4,18 +4,18 @@ return {
   --   lazy = true,
   --   name = "catppuccin",
   -- },
-  -- {
-  --   "scottmckendry/cyberdream.nvim",
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require("cyberdream").setup({
-  --       transparent = true,
-  --       italic_comments = true,
-  --       hide_fillchars = true,
-  --     })
-  --   end,
-  -- },
+  {
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("cyberdream").setup({
+        transparent = true,
+        italic_comments = true,
+        hide_fillchars = true,
+      })
+    end,
+  },
   {
     "nyoom-engineering/oxocarbon.nvim",
     lazy = false,
@@ -29,11 +29,14 @@ return {
     -- end,
   },
   {
+    "rebelot/kanagawa.nvim",
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "catppuccin",
-      -- colorscheme = "cyberdream",
-      colorscheme = "oxocarbon",
+      colorscheme = "cyberdream",
+      -- colorscheme = "kanagawa",
     },
   },
 }
