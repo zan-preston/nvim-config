@@ -21,7 +21,8 @@ return {
             open_in_browser = { lhs = "<C-b>", desc = "open issue in browser" },
             copy_url = { lhs = "<C-y>", desc = "copy url to system clipboard" },
             checkout_pr = { lhs = "<C-o>", desc = "checkout pull request" },
-            merge_pr = { lhs = "<C-r>", desc = "merge pull request" },
+            -- Hoo boy, this mapping could cause some trouble
+            -- merge_pr = { lhs = "<C-r>", desc = "merge pull request" },
           },
         },
         comment_icon = "▎", -- comment marker
